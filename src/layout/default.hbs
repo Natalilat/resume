@@ -7,15 +7,50 @@
 
   <head>
     <title>
-      Page name
+      {{page.title}}
     </title>
     <meta charset='utf-8' />
     <link href='css/index.css' rel='stylesheet' />
   </head>
 
   <body>
+    {{#with header}}
+     <header>
+        <div>
+            <h1>{{name.firstname}} {{name.lastname}}</h1> 
+        </div>
+        <div>
+            <b>{{position}}</b>
+        </div>
+        <br>
+        <div>
+            <em>
+              <b>{{salary}}</b>
+                </em>
+        </div>
+        <hr>
+         <br>
+        <div>
+             <address>{{address}}</address> 
+        </div>
+        <br>
+        <hr>                   
+        </header>
+    {{/with}}
+     <nav>
+            {{> link text="Summary" href="/summary" line=true }}
+            {{> link text="Skills" href="/skills" line=true }}
+            {{> link text="Education" href="/education" line=true }}
+            {{> link text="Work" href="/work" line=true }}
+    </nav>
+          
+     
     {{!  ↓  ця кострукція показує куди шаблонізатору треба вставляти код з container файлу   --}}
     {{{body}}}
-  </body>
+    <br>
+    <hr>
+       
+    {{> footer social=footer.social firstname=header.name.firstname lastname=header.name.lastname address=header.address}}
+</body>
 
 </html>
