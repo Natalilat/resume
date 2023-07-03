@@ -1,0 +1,137 @@
+{{!-- 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+
+<div>
+    
+    <div><h1>{{name}}</h1></div>
+   
+          <div><i>Birthdate:</i>  {{birthdate}}
+           <br>
+           {{birthplace}}</div>  
+        <br>
+          <div><i>Deathdate:</i>  {{deathdate}}
+           <br>
+           {{deathplace}}< /div>
+           <hr>
+
+        <p><b>Nationality:</b> {{nationality}}</p>
+        <p><b>Occupation:</b> {{occupation}}</p>
+        <p><b>Known for:</b>  {{known_for}}</p>
+        
+        {{#each education}}
+        <p><b>Education:</b> {{education}}</p>
+             <li><i>Degree:</i> {{degree}}</li>
+                    <li><i>Field:</i> {{field}}</li>
+                    <li><i>Institution:</i> {{institution}}</li>
+                    <li><i> Year:</i> {{year}}</li>
+        {{/each}}
+        <p><b>Notable publication:</b></p> 
+    {{#each notable_publications}}
+        -<cite>{{title}}</cite> ({{year}}), publisher: {{publisher}}
+        {{/each}}
+    <br>
+
+    <p><b>Partners:</b></p>
+    {{#each partners}}
+        -{{name}} ({{relationship}}), {{years}}
+            <br>
+    {{/each}}
+    <br>
+    <p><b>Awards:</b></p>
+    {{#each awards}}
+    {{title}} ({{year}}) <q>{{description}}</q>
+    {{/each}}
+    <br>
+    <hr>
+
+    <p><b>Influences:</b></p>
+    {{#with influences}}
+    {{this}}
+    {{/with}}
+    <br>
+    <br>
+
+    <p><b>Influenced:</b></p>
+    {{#with influenced}}
+    {{this}}
+    {{/with}}
+    <br>
+    <br>
+    <p><b>Quotes:</b></p>
+    {{#each quotes}}
+    <li>
+        <q>{{this}}</q>
+    </li>
+    {{/each}}
+    <br>
+    
+    <div>
+        <b>Major discoveries:</b>
+    </div>
+        {{#each major_discoveries}}
+        <br>
+             <q>{{title}}</q>, {{year}} ({{description}})
+        {{/each}}
+        <br>
+        <br>
+       
+        <p><b>Contributions:</b></p>
+       
+        {{#with contributions}}
+            {{title}},  ({{year}}, {{field}})
+      <br>
+      <details>{{description}}</details>
+        <br>
+        {{/with}}
+       
+  </div>   
+   
+   
+
+           
+      
+
+
+ 
+   
+               
+      
+       
+            
+            
+                
+                  
+                                      
+                                              
+                                          
+                     
+                 
+                           
+                           
+            
+                     
+                      
+                                                             
+                      
+    
+                
+                
+               
+    
+    
+      
+                    
+           
+   
+   
+    
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
+
+
+
