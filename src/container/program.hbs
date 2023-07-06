@@ -1,0 +1,174 @@
+{{!-- 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+
+<div>
+        
+    <div><h2>Program</h2></div>
+        <hr>
+            <p><b>Excursion:</b></p>
+                              
+                {{#each program}}
+                    <u><em><h2>{{name}}</h2> </em></u>
+                    <p>Date: {{date}}</p>
+                                        
+                {{#with location}} 
+                     <p><i>location:</i> {{city}}, {{country}}</p>  
+                 {{/with}}
+
+                {{#each program}}
+                    <div> <h3>{{name}}</h3></div>
+                        <p>Type: {{type}}</p> 
+                        <p>Duration -{{duration}} days</p>
+                                
+                           
+                <p>Details:</p>
+                {{#with details.museum}}
+                    <u><h3>{{name}}</h3></u>
+                {{#with location}} 
+                    <p><i>location:</i>  {{address}},{{city}}, {{country}}</p>  
+                {{/with}}
+
+                {{#with details.venue}}
+                    <u><h3>{{name}}</h3></u>
+                <hr>
+                {{#with location}}
+                    <p><i>location:</i> {{address}}, {{country}}</p> 
+                {{/with}}
+                {{/with}}
+                           
+                    <br> 
+                    <hr>
+                    
+                <i><p>Exhibits:</p></i>
+                <ul>
+                    {{#each exhibits}}
+                        <li>
+                            <p>
+                                <strong>{{name}}</strong>
+                                {{#if artist}} ({{artist}}){{/if}}
+                                {{#if audio_guide}}<sup>*audio guide</sup>{{/if}}
+                            </p>
+                            <div><dfn>{{description}}</dfn></div>
+                        </li>
+                </ul> 
+                    {{/each}}
+               {{/with}}
+          
+                    {{#each details.performers}}
+                        <p><i>Performers:</i></p>
+                        <ul>
+                            <li>
+                                {{name}}{{type}} 
+                            </li>
+                        </ul>
+                    {{/each}}       
+                   
+                {{#with details.guide}}
+                     <p><i>Guide:</i><b>{{name}}</b></p>(language -{{language}}, rating - {{rating}})
+                {{/with}}
+               
+            {{/each}} 
+        {{/each}} 
+    </div>             
+              
+        
+              
+           
+             
+               
+      
+       
+        
+                  
+                  
+           
+
+                                    
+                
+                    
+                
+             
+
+            
+
+               
+
+                 
+                     
+
+                  
+
+        
+           
+           
+                
+              
+               
+                
+           
+        
+                   
+                   
+               
+
+
+    
+
+           
+
+
+
+          
+        
+     
+  </div>   
+   
+   
+
+           
+      
+
+
+ 
+   
+               
+      
+       
+            
+            
+                
+                  
+                                      
+                                              
+                                          
+                     
+                 
+                           
+                           
+            
+                     
+                      
+                                                             
+                      
+    
+                
+                
+               
+    
+    
+      
+                    
+           
+   
+   
+    
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
+
+
+
