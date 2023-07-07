@@ -1,0 +1,169 @@
+<div>
+    {{#with web}}
+        <div><h1>Languages:</h1></div>
+        <hr>
+                                         
+                {{#each languages}}
+                    <u><em><h2>{{name}}</h2></em></u>
+                    <p>Version: <b>{{version}}</b></p>
+                    <p><dfn>{{description}}</dfn></p>
+                                                  
+                {{#each elements}}
+                    <p><b>Elements:</b> <u><b>{{name}}</b></u></p>
+                    <p><dfn>({{description}})</dfn></p>
+
+                 <ul>          
+                    {{#each attributes}}
+                    <li>
+                        <p><b>Attributes:</b> <i><u>{{name}}</u></i></p>
+                        <p><dfn>({{description}})</dfn></p>
+                    </li>
+                    {{/each}}
+                </ul>
+                 {{/each}}
+            
+            <br>
+            
+                      
+                {{#each properties}}
+                    <p><b>Properties:</b> <u><b>{{name}}</b></u></p> 
+                    <p><dfn>({{description}})</dfn></p>
+
+                <ul>
+                    {{#each values}}
+                     <li>
+                        <p><b>Value:</b> <i><u>{{value}}</u></i></p>
+                        <p><dfn>({{description}})</dfn></p>
+                    </li>
+                     {{/each}}
+                </ul>
+                 {{/each}}
+
+                <br>
+                <hr>
+
+                {{#each functions}}
+                       <p><b>Name:</b>  <u>{{name}}</u></p>
+                        <dd>{{description}}</dd>
+
+                   <p><b>Parameters:</b></p>
+               <ul>
+                    {{#each parameters}}
+                    <li>
+                        <p><b>Name:</b>  <i><u>{{name}}</u></i>,
+                             <b>Type</b> - <i><u></u>{{type}}</u></i></p>
+                        <p><dd>({{description}})</dd></p> 
+                    </li>
+                    {{/each}}
+                </ul>
+                     
+                {{/each}}
+
+                {{/each}}
+        {{/with}}
+</div>
+           
+        
+    
+
+             
+               
+            
+
+                
+              
+        
+              
+           
+             
+               
+      
+       
+        
+                  
+                  
+           
+
+                                    
+                
+                    
+                
+             
+
+            
+
+               
+
+                 
+                     
+
+                  
+
+        
+           
+           
+                
+              
+               
+                
+           
+        
+                   
+                   
+               
+
+
+    
+
+           
+
+
+
+          
+        
+     
+  
+   
+   
+
+           
+      
+
+
+ 
+   
+               
+      
+       
+            
+            
+                
+                  
+                                      
+                                              
+                                          
+                     
+                 
+                           
+                           
+            
+                     
+                      
+                                                             
+                      
+    
+                
+                
+               
+    
+    
+      
+                    
+           
+   
+   
+    
+
+
+
+
