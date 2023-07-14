@@ -1,0 +1,284 @@
+<div>
+    <div><h1>{{make}}</h1></div>
+    <div><p><strong>{{model}}, <b>{{year}}</b></strong></p></div>
+                  
+            
+         <div><p><b> Color</b> - {{color}}</p></div>
+                     
+           
+                   <p><h5>Interior:</h5></p>
+
+        <div class="btn-group">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    Seats
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#"></a></li>
+     {{#with features.interior.seats}}
+    <li><a class="dropdown-item" href="#">{{material}}, {{color}}</a></li>
+     {{#if heated}} heated {{/if}},
+     {{#if ventilated}} ventilated {{/if}}
+    {{/with}}
+      </ul>
+</div>
+
+ <div class="btn-group">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    Dashboard
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#"></a></li>
+     {{#with features.interior.dashboard}}
+    <li><a class="dropdown-item" href="#">{{material}}, {{color}}</a></li>
+    
+    {{#with display}}
+    {{type}}, Size: {{size}}, {{resolution}}
+   
+     {{#if heated}} heated {{/if}},
+     {{#if ventilated}} ventilated {{/if}}
+    {{/with}}
+    {{/with}}
+      </ul>
+   </div>
+
+   <div class="btn-group">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    Audio
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#"></a></li>
+     {{#with features.interior.audio}}
+    <li><a class="dropdown-item" href="#"> System: {{system}}, speakers: {{speakers}}
+        <br>
+     {{#if subwoofer}} subwoofer {{/if}},
+     {{#if bluetooth}} bluetooth {{/if}}
+     {{#if USB}} USB {{/if}}
+    </a></li>
+     {{/with}}
+      </ul>
+   </div>
+
+ <p><h5>Exterior:</h5></p>
+
+        <div class="btn-group">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    Wheels
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#"></a></li>
+     {{#with features.exterior.wheels}}
+    <li><a class="dropdown-item" href="#">Size: {{size}}
+        <br>
+        Type: {{type}}
+        <br>
+         Color: {{color}}</a></li>
+      {{/with}}
+      </ul>
+</div>
+
+        <div class="btn-group">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    Sunroof
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#"></a></li>
+     {{#with features.exterior.sunroof}}
+    <li><a class="dropdown-item" href="#">
+        {{type}} ({{size}})
+        </a></li>
+         {{#if automatic}} automatic {{/if}}
+      {{/with}}
+      </ul>
+</div>
+<br>
+<br>
+<p><h5>Safety:</h5></p>
+<p><h6>Airbags:</h6></p>
+
+<button type="button" class="btn btn-outline-primary">Front - 2</button>
+<button type="button" class="btn btn-outline-secondary">Side - 2</button>
+<button type="button" class="btn btn-outline-success">Knee - 2</button>
+<button type="button" class="btn btn-outline-danger">Rear - 2</button>
+ 
+ <p><u><h6>Assistance:</h6></u></p>
+ <div class="form-floating">
+  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+  <label for="floatingTextarea">
+    {{#with features.safety.assistance}}
+    {{#if  blind_spot_monitoring}} <b>blind_spot_monitoring</b> {{/if}} <br>
+    
+ 
+    {{#if  blind_spot_monitoring}} <b>blind_spot_monitoring</b> {{/if}} <br>
+    {{#if  blind_spot_monitoring}} <b>blind_spot_monitoring</b> {{/if}} <br>
+    {{#if  rear_cross_traffic_alert}} <b>rear_cross_traffic_alert</b> {{/if}} <br>
+    {{#if  lane_departure_warning}} <b>lane_departure_warning</b> {{/if}} <br>
+    {{#if  adaptive_cruise_contro}} <b>adaptive_cruise_contro</b> {{/if}} 
+    {{#if  collision_warning}} <b>collision_warning</b> {{/if}} 
+{{/with}}
+</label>
+</div>
+ <p><u><h5>Engine:</h5></u></p>
+{{#with engine}}
+<p>Type: {{type}} <br>
+ displacement {{displacement}} <br>
+torque: {{torque}}</p>
+
+
+    <u>Transmission: </u>
+     {{#with transmission}}
+       <strong>{{type}} ({{gears}})</strong>
+       {{/with}}
+</div>
+ {{/with}}
+
+ <p><h5>Fuel economy :</h5></p>
+   
+  <button type="button" class="btn btn-primary">
+  City <span class="badge text-bg-secondary">28</span>
+</button>
+ <button type="button" class="btn btn-primary">
+  Highway <span class="badge text-bg-secondary">39</span>
+</button>
+ <button type="button" class="btn btn-primary">
+  Combined <span class="badge text-bg-secondary">32</span>
+</button>
+<br>
+<br>
+<div class="d-grid gap-2 col-6 mx-auto">
+  <button class="btn btn-primary" type="button"><p><u><h5>Price</h5></u></p></button>
+
+   {{#with price}}
+   <button type="button" class="btn btn-primary btn-sm">Base - {{base}}</button>
+   <button type="button" class="btn btn-primary btn-sm">Destination - {{destination}}</button> 
+  
+  {{#with options}}
+   <button type="button" class="btn btn-secondary btn-sm">navigation: {{navigation}}</button>
+   <button type="button" class="btn btn-secondary btn-sm">moonroof: {{moonroof}}</button>
+   <button type="button" class="btn btn-secondary btn-sm">premium_paint: {{premium_paint}}</button>
+   
+
+   <div class="d-grid gap-2 col-6 mx-auto">
+  <button class="btn btn-primary" type="button">TOTAL: 28900</button>
+   
+   {{/with}}
+   {{/with}}
+</div> 
+
+       
+        
+       
+         
+      
+  
+  
+
+
+             
+     
+        
+
+           
+        
+    
+
+             
+               
+            
+
+                
+              
+        
+              
+           
+             
+               
+      
+       
+        
+                  
+                  
+           
+
+                                    
+                
+                    
+                
+             
+
+            
+
+               
+
+                 
+                     
+
+                  
+
+        
+           
+           
+                
+              
+               
+                
+           
+        
+                   
+                   
+               
+
+
+    
+
+           
+
+
+
+          
+        
+     
+  
+   
+   
+
+           
+      
+
+
+ 
+   
+               
+      
+       
+            
+            
+                
+                  
+                                      
+                                              
+                                          
+                     
+                 
+                           
+                           
+            
+                     
+                      
+                                                             
+                      
+    
+                
+                
+               
+    
+    
+      
+                    
+           
+   
+   
+    
+
+
+
+
