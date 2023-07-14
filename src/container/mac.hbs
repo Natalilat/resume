@@ -1,0 +1,117 @@
+<div>
+    
+
+ <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><h1>{{name}}</h1></h5>
+    <p class="card-text"><strong><dfn>{{description}}</dfn></strong></p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">PRICE:  <strong>{{price}}</strong></li>
+    <br>
+    <li class="list-group-item">Category:  <strong> {{category}}</strong></li>
+    <br>
+{{#with features}}
+
+ <div><p><strong>Processor: </strong></p></div>
+  {{#with processor}}
+   <button type="button" class="btn btn-outline-warning">{{brand}}</button>
+  <button type="button" class="btn btn-outline-warning">{{model}}</button>
+  <button type="button" class="btn btn-outline-warning">{{speed}}</button>
+  <button type="button" class="btn btn-outline-warning">Cores: ({{cores}})</button>
+  <button type="button" class="btn btn-outline-warning">{{cache}}</button>
+  
+   </ul>
+    <br>
+ {{/with}}
+
+  </div><p><strong>Memory</strong></p>
+  {{#with memory}}
+
+  <button type="button" class="btn btn-primary">Type:  {{type}}</button>
+  <button type="button" class="btn btn-primary">Size:  {{size}}</button>
+  <button type="button" class="btn btn-primary">Speed:  {{speed}}</button>
+     {{/with}}
+<br>
+<br>
+ </div><p><strong>Storage</strong></p>
+  {{#with storage}}
+
+  <button type="button" class="btn btn-primary">Type:  {{type}}</button>
+  <button type="button" class="btn btn-primary">Size:  {{size}}</button>
+  
+     {{/with}}
+<br>
+<br>
+
+ </div><p><strong>Display</strong></p>
+  {{#with display}}
+
+  <button type="button" class="btn btn-primary">{{size}}</button>
+  <button type="button" class="btn btn-primary">{{resolution}}</button>
+  <button type="button" class="btn btn-primary">{{retina}}</button>
+  <button type="button" class="btn btn-primary">Color space:  {{color_space}}</button> 
+  <button type="button" class="btn btn-primary">{{brightness}}</button> 
+  <button type="button" class="btn btn-primary">{{refresh_rate}}</button> 
+     {{/with}}
+<br>
+<br>
+</div><p><strong>Graphics</strong></p>
+  {{#with graphics}}
+
+  <button type="button" class="btn btn-primary">{{brand}}</button>
+  <button type="button" class="btn btn-primary">{{model}}</button>
+  <button type="button" class="btn btn-primary">{{memory}}</button>
+      {{/with}}
+<br>
+
+</div><p><strong>Ports</strong></p>
+  {{#each ports}}
+  <button type="button" class="btn btn-primary">{{type}}</button>
+  <button type="button" class="btn btn-primary"><em>Count - {{count}}</em></button>
+  
+     
+<br>
+
+  {{#each features}}
+     <div class="d-grid gap-2">
+  <button class="btn btn-primary" type="button">{{this}}</button>
+</div>
+  {{/each}}
+  {{/each}}
+<br>
+
+</div><p><strong>Battery</strong></p>
+{{#with battery}}
+<span class="badge text-bg-primary">{{type}}</span>,
+<span class="badge text-bg-primary">{{capacity}}</span>,
+<span class="badge text-bg-primary">{{life}}</span>
+{{/with}}
+<br>
+<br>
+
+</div><p><strong>Weight: {{weight}}</strong></p>
+{{#with dimensions}}
+<div class="btn-group">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    Dimensions
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Height: {{height}}</a></li>
+    <li><a class="dropdown-item" href="#">Weight: {{weight}}Another action</a></li>
+    <li><a class="dropdown-item" href="#">Depth: {{depth}}</a></li>
+ </ul>
+</div>
+{{/with}}
+<br>
+<br>
+</div><p><strong>Operating_system - <u>macOS</u></strong></p>
+</div><p><strong>Accessories: </strong></p>
+{{#each accessories}}
+<span class="badge rounded-pill text-bg-success">{{name}}</span> 
+<span class="badge rounded-pill text-bg-danger">({{price}})</span><br>
+{{/each}}
+
+ {{/with}}
+ </div>       
