@@ -1,0 +1,44 @@
+<div>
+  
+  <div><h1>{{name}}</h1></div>
+ 
+   {{#each users}}
+     <button type="button" class="btn btn-link"><h3>{{id}}. {{name}}</h3></button>
+               <p>({{gender}}, {{age}})</p>
+     
+        
+     <br>
+
+    {{#each friends}}
+        <button type="button" class="btn btn-link"><u>Friends:
+          
+        </u> [{{id}}] {{name}} ({{gender}}, {{age}})</button>
+       
+   
+  
+    {{#each mutual_friends}}
+       <button type="button" class="btn btn-link"><u>mutual_friends:
+
+       </u> [{{id}}] {{name}} ({{gender}}, {{age}})</button>
+       
+     {{/each}}
+  <hr>
+    
+    {{#each groups}}  
+        <a class="btn btn-primary" href="#" role="button">
+          <strong><h5>{{name}} (group)</h5 ></strong></a>
+        <p><dfn>{{description}}</dfn></p>
+    
+    {{#each members}}
+      <button type="button" class="btn btn-link"><u> members:</u> 
+      [{{id}}] {{name}} ({{gender}}, {{age}})</button>
+     
+       
+     <br>
+         
+   
+      {{/each}}
+      {{/each}}  
+      {{/each}}
+      {{/each}}
+</div>       
