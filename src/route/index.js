@@ -696,6 +696,7 @@ router.get('/js', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('js', {
     layout: 'basic',
+    layout: 'default',
     name: 'JavaScript',
     description:
       'JavaScript is a popular high-level, dynamic, and interpreted programming language.',
@@ -776,6 +777,7 @@ router.get('/car', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('car', {
     Layout: 'basic',
+    layout: 'default',
     make: 'Toyota',
     model: 'Camry',
     year: 2022,
@@ -875,6 +877,7 @@ router.get('/mac', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('mac', {
     layout: 'basic',
+    layout: 'default',
     name: 'Apple MacBook Pro',
     description: 'The ultimate notebook for power users',
     price: 1999.99,
@@ -949,6 +952,257 @@ router.get('/mac', function (req, res) {
         {
           name: 'USB-C to USB Adapter',
           price: 19.99,
+        },
+      ],
+    },
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+// ================================================================
+
+router.get('/facebook', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('facebook', {
+    layout: 'basic',
+    layout: 'default',
+    name: 'Facebook',
+    users: [
+      {
+        id: 1,
+        name: 'John Doe',
+        gender: 'male',
+        age: 30,
+        friends: [
+          {
+            id: 2,
+            name: 'Jane Smith',
+            gender: 'female',
+            age: 27,
+            mutual_friends: [
+              {
+                id: 4,
+                name: 'Samantha Lee',
+                gender: 'female',
+                age: 25,
+              },
+            ],
+          },
+          {
+            id: 5,
+            name: 'Mike Williams',
+            gender: 'male',
+            age: 28,
+            mutual_friends: [
+              {
+                id: 7,
+                name: 'David Kim',
+                gender: 'male',
+                age: 29,
+              },
+            ],
+          },
+        ],
+        groups: [
+          {
+            id: 1,
+            name: 'Hiking Enthusiasts',
+            description:
+              'A group for people who love hiking and the great outdoors',
+            members: [
+              {
+                id: 8,
+                name: 'Sarah Johnson',
+                gender: 'female',
+                age: 25,
+              },
+            ],
+          },
+          {
+            id: 2,
+            name: 'Foodies United',
+            description:
+              'A group for food lovers to share recipes and restaurant recommendations',
+            members: [
+              {
+                id: 5,
+                name: 'Mike Williams',
+                gender: 'male',
+                age: 28,
+              },
+              {
+                id: 8,
+                name: 'Sarah Johnson',
+                gender: 'female',
+                age: 25,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: 16,
+        name: 'Amy Lee',
+        gender: 'female',
+        age: 30,
+        friends: [
+          {
+            id: 15,
+            name: 'Peter Kim',
+            gender: 'male',
+            age: 32,
+            mutual_friends: [
+              {
+                id: 17,
+                name: 'David Chen',
+                gender: 'male',
+                age: 33,
+              },
+              {
+                id: 19,
+                name: 'Erica Wong',
+                gender: 'female',
+                age: 29,
+                mutual_friends: [
+                  {
+                    id: 20,
+                    name: 'Alex Lee',
+                    gender: 'male',
+                    age: 31,
+                  },
+                ],
+              },
+            ],
+            groups: [
+              {
+                id: 3,
+                name: 'Travel Addicts',
+                description:
+                  'A group for people who love to travel and explore new places',
+                members: [
+                  {
+                    id: 22,
+                    name: 'Jackie Chen',
+                    gender: 'female',
+                    age: 26,
+                  },
+                ],
+              },
+              {
+                id: 4,
+                name: 'Pet Lovers',
+                description:
+                  'A group for people who love their furry friends',
+                members: [
+                  {
+                    id: 16,
+                    name: 'Amy Lee',
+                    gender: 'female',
+                    age: 30,
+                  },
+                  {
+                    id: 25,
+                    name: 'John Smith',
+                    gender: 'male',
+                    age: 33,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+// ================================================================
+
+
+//=================================================================
+
+// router.get Створює нам один ентпоїнт
+
+//           ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/bootstrap', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('bootstrap', {
+  layout: 'bootstrap',
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+
+// ================================================================
+
+router.get('/task21', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('task21', {
+    layout: 'bootstrap',
+   
+    heading: {
+      main: {
+        title: 'JavaScript',
+        text: 'JavaScript is a popular high-level, dynamic, and interpreted programming language.',
+        button_text: {
+          solid: 'Open page',
+          outline: 'Add to cart',
+        },
+      },
+      second: {
+        title: 'Stack Overflow',
+        text: 'First-class functions',
+        button_text: {
+          solid: 'Open page',
+          outline: 'Add to cart',
+        },
+      },
+      subblock: {
+        title: 'JavaScript Weekly',
+        text: 'Prototype-based inheritance newsletter',
+        button_text: {
+          solid: 'Open page',
+          outline: 'Add to cart',
+        },
+      },
+    },
+    nested_display: {
+      title: 'HTML',
+      children_display: {
+        title: 'Outdated HTML tags',
+        text: 'tags that have been identified as deprecated and not recommended for use in HTML version 5',
+        button: {
+          text: 'Орen',
+        },
+      },
+      header_text: 'Sections',
+      button: {
+        text: 'Learn more',
+      },
+    },
+    paragraph: {
+      title: 'About modules',
+      text: 'Modules with import/export statements',
+
+      button: {
+        text: 'Open link page',
+        url: 'https://google.com',
+      },
+      list_name: [
+        {
+          text: 'Github',
+          url: 'https://github.com/',
+        },
+        {
+          text: 'Bootstrap',
+          url: 'https://getbootstrap.com/',
         },
       ],
     },
