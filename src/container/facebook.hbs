@@ -13,32 +13,58 @@
         <button type="button" class="btn btn-link"><u>Friends:
           
         </u> [{{id}}] {{name}} ({{gender}}, {{age}})</button>
-       
-   
-  
+      
+            
     {{#each mutual_friends}}
        <button type="button" class="btn btn-link"><u>mutual_friends:
 
        </u> [{{id}}] {{name}} ({{gender}}, {{age}})</button>
-       
-     {{/each}}
+     
+     {{#if mutual.friends}}
+     <p>Mutual friends:</p>
+
+     {{#each mutual_friends}}
+       <button type="button" class="btn btn-link"><u>mutual_friends:
+
+       </u> [{{id}}] {{name}} ({{gender}}, {{age}})</button>
+      
+      {{/each}}
+      {{/if}}
+      {{/each}}
   <hr>
     
+    {{#if groups}} <p>Groups:</p>
     {{#each groups}}  
         <a class="btn btn-primary" href="#" role="button">
-          <strong><h5>{{name}} (group)</h5 ></strong></a>
+          <strong><h5>{{name}}</h5 ></strong></a>
         <p><dfn>{{description}}</dfn></p>
-    
+             
     {{#each members}}
       <button type="button" class="btn btn-link"><u> members:</u> 
       [{{id}}] {{name}} ({{gender}}, {{age}})</button>
-     
-       
-     <br>
-         
-   
+      
+      {{/each}} 
       {{/each}}
+      {{/if}}
       {{/each}}  
+<br>
+
+      {{#if groups}} <p>Groups:</p>
+      {{#each groups}}  
+        <a class="btn btn-primary" href="#" role="button">
+          <strong><h5>{{name}}</h5 ></strong></a>
+          <p><dfn>{{description}}</dfn></p>
+        
+        
+         {{#each members}}
+      <button type="button" class="btn btn-link"><u> members:</u> 
+      [{{id}}] {{name}} ({{gender}}, {{age}})</button>
+      <br>
       {{/each}}
+      {{/each}}
+      {{/if}}
       {{/each}}
 </div>       
+       
+   
+     
