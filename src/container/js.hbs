@@ -7,112 +7,113 @@
             {{/with}}
             <hr>
        <div>
-            <p><b>Types:</b></p>
-                <span class="badge text-bg-primary">Number</span>
-                <span class="badge text-bg-secondary">String</span>
-                <span class="badge text-bg-success">Boolean</span>
-                <span class="badge text-bg-danger">Null</span>
-                <span class="badge text-bg-warning">Undefined</span>
-                <span class="badge text-bg-info">Symbol</span>
-                <span class="badge text-bg-light">Object</span>
+        <div class="display-6">Types:</div>
+                
+            {{#each types}}              
+      
+    <a class="nav-link active" aria-current="page" href="#">{{this}}</a>
+ 
+             {{/each}}
+                     
         </div>
             <hr>
 
          <p><b>Syntax:</b></p>
-        <em>Variables - </em>         
-           
-                <button type="button" class="btn btn-outline-primary">var</button>
-                <button type="button" class="btn btn-outline-primary">let</button>
-                <button type="button" class="btn btn-outline-primary">const</button>
-            <br>
-            <br>
-            
-        <em>Conditionals - </em>         
-           
-                <button type="button" class="btn btn-outline-primary">if</button>
-                <button type="button" class="btn btn-outline-primary">else</button>
-                <button type="button" class="btn btn-outline-primary">switch</button>
-
-            <br>
-            <br>
-            
-        <em>Loops - </em>         
-           
-                 <button type="button" class="btn btn-outline-primary">for</button>
-                 <button type="button" class="btn btn-outline-primary">while</button>
-                <button type="button" class="btn btn-outline-primary">do-while</button>
-
-            <br>
-            <br>
-            
-        <em>Classes - </em>         
-           
-                <button type="button" class="btn btn-outline-primary">class</button>
-            <br>
-            <hr>
-            
-        <p><b>Features:</b></p>
-            <ul>
-                <div class="vstack gap-3">
-                <div class="p-2">First-class functions</div>
-                <div class="p-2">Closures</div>
-                <div class="p-2">TDynamic typing</div>
-                <div class="p-2">Prototype-based inheritance</div>
-                <div class="p-2">Asynchronous programming with Promises and async/await</div>
-                <div class="p-2">Modules with import/export statements</div>
-                </div> 
-            </ul>
-             <br>
-           <hr>
-
-              <div>
-                <p><b>Libraries:</b></p>
         
-            <ul>
-               
-            <li> <span class="badge rounded-pill text-bg-primary">jQuery</span></li>
-            <li> <span class="badge rounded-pill text-bg-primary">React</span> </li>
-            <li> <span class="badge rounded-pill text-bg-primary">Angular</span></li>
-            <li> <span class="badge rounded-pill text-bg-primary">Vue</span></li>
-            <li> <span class="badge rounded-pill text-bg-primary">Node.js</span></li>
-            <li> <span class="badge rounded-pill text-bg-primary">Express.js</span></li>
-            <li> <span class="badge rounded-pill text-bg-primary">Lodash.js</span></li>
-            <li>  <span class="badge rounded-pill text-bg-primary">Moment.js</span></li>
-            
-            </ul>
-        </div>
-        <br>
-        <hr> 
+        {{#with syntax}} 
 
-        <div>
-                <p><b>Tools:</b></p>                        
-              <span class="badge rounded-pill text-bg-primary">Babel</span>
-              <span class="badge rounded-pill text-bg-primary">Webpack</span>
-              <span class="badge rounded-pill text-bg-primary">Eslint</span>
-              <span class="badge rounded-pill text-bg-primary">Jest</span>
-              <span class="badge rounded-pill text-bg-primary">Mocha</span>
-              <span class="badge rounded-pill text-bg-primary">Chai</span>
-              <span class="badge rounded-pill text-bg-primary">Selenium</span>
-              <span class="badge rounded-pill text-bg-primary">Cypress</span>
-      </div>
-      <br>
-      <hr>
-      <div>
-                <p><b>Community:</b></p>                        
+              <div class="display-6">Variables:</div>
+             {{#each variables}}
+            <button type="button" class="btn btn-outline-info">{{this}}</button>
+             {{/each}}
+                              
+        <br>
+
+        <div class="display-6">Functions:</div>
+            {{#each functions}}
+                <button type="button" class="btn btn-outline-info">{{this}}</button>
+             {{/each}}
+        <br>
+
+         <div class="display-6">Conditionals:</div>
+            {{#each conditionals}}
+               <button type="button" class="btn btn-outline-info">{{this}}</button>
+            {{/each}}
+        <br>
+
+       <div class="display-6">Loops:</div>
+            {{#each loops}}
+                <button type="button" class="btn btn-outline-info">{{this}}</button>
+            {{/each}}
+        <br>
+
+            <div class="display-6">Classes:</div> 
+            {{#each classes}}
+                <button type="button" class="btn btn-outline-info">{{this}}</button>
+            {{/each}}
+
+        {{/with}}
+            <br>
+            <br>
+
+            <div class="card">
+                <div class="display-6">Features:</div>
+            </div>
+             {{#each features}}
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <a href="#" class="btn btn-info">{{this}}</a>
+                </li>
+                 {{/each}}
+            </ul>
+
+            <br>
+
+            <div class="card">
+                <div class="display-6">Libraries:</div>
+            </div>
+             {{#each libraries}}
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <a href="#" class="btn btn-link">{{this}}</a>
+                </li>
+                 {{/each}}
+            </ul>
+
+            <br>
+
+             <div class="card">
+                <div class="display-6">Tools:</div>
+            </div>
+             {{#each tools}}
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <a href="#" class="btn btn-link">{{this}}</a>
+                </li>
+                 {{/each}}
+            </ul>
+           
+            <br>
+
+             <div class="card">
+                <div class="display-6">Community:</div>
+            </div>
+             {{#each community}}
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <a href="#" class="btn btn-link">{{name}} ({{type}})</a>
+                </li>
+                 {{/each}}
+            </ul>
                 
-  <button type="button" class="btn btn-primary">
-  Stack Overflow </button> (forum)</button>
-  <br>
-  <button type="button" class="btn btn-primary">
-  JavaScript Weekly  </button> (newsletter) </button>
-<br>
-  <button type="button" class="btn btn-primary">
-  The Changelog </button> (podcast) </button>
-  <br>
-  <button type="button" class="btn btn-primary">
-  CSS-Tricks </button> (blog) </button>
-  <br>
-     </div>
+           
+            
+           
+             
+                        
+                                   
+  
+    
         
 </div>
            

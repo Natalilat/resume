@@ -1,0 +1,129 @@
+<div>
+    
+         {{#with navigation}} 
+            {{#each links}}
+              
+               <p><button type="button" class="btn btn-link">{{text}}</button></p> 
+              
+            {{/each}}
+          {{/with}}
+
+            {{#with button}}
+            <p>{{text}}:    {{href}}</p>
+         
+         {{/with}}
+
+
+         {{#with header}}
+               <p>{{title}}</p>
+               <p>{{description}}</p>
+               {{/with}}
+
+         {{#with city}}
+               <p>{{title}}</p>
+               
+               {{#each cards}}
+
+                  {{#with picture}}
+                  <div>{{src}}    {{alt}}</div>
+                  {{/with}}
+
+                  <p>{{title}}</p>
+                  <p>{{description}}</p>
+
+                      {{#with button}}
+                  <div>{{text}}    {{href}}</div>
+                  {{/with}}
+
+               {{/each}}
+         {{/with}}
+        
+        {{#with winner}}
+             <p>{{title}}</p>
+
+                {{#with table}}
+                     {{#each head}}
+                        {{this}}
+                     {{/each}}
+
+
+                     {{#each user}}
+                        {{place}}:  {{name}}:  {{surname:}}   {{nickname}}:
+                     {{/each}}
+
+                {{/with}}
+            {{/with}}  
+
+
+          {{#with gallery}}
+             <p>{{title}}</p>
+
+                  {{#each cards}}
+                  {{name}}  
+                  
+                     {{#each items}}
+                     {{name}}  {{items}}
+                     {{/each}}
+                  {{/each}}
+        {{/with}}
+     
+         {{#with relaxion}}
+             <p>{{title}}</p>
+
+                  {{#each cards}}
+                     {{header}} 
+                      {{title}}
+                        {{description}}
+                  {{/each}}
+
+         {{/with}}
+
+          {{#with rest}}
+             
+                  {{#each cards}}
+                     {{header}}
+                       {{title}}  
+                        {{description}}
+                     <button>{{button}}</button>
+                     {{footer}}
+                  {{/each}}
+      {{/with}}
+
+
+             {{#with proposition}}
+             <p>{{title}}</p>
+
+                  {{#each cards}}
+                     {{header}} 
+                      {{title}}
+                        {{description}}
+                  {{/each}}
+
+         {{/with}}
+
+         {{#with footer}}
+             <p>{{title}}</p>
+
+                  {{#each navigation}}
+                     {{text}} 
+                      {{href}}
+                  {{/each}}
+
+                  {{#each socialMedia}}
+                     {{name}} 
+                      {{link}}
+                  {{/each}}
+
+
+                  {{#each partners}}
+                     {{name}} 
+                      {{link}}
+                  {{/each}}
+         {{/with}}
+
+
+
+
+</div>
+
+
