@@ -14,19 +14,19 @@
     <a class="nav-link active" aria-current="page" href="#">{{this}}</a>
  
              {{/each}}
-                     
+                  
         </div>
             <hr>
 
          <p><b>Syntax:</b></p>
-        
-        {{#with syntax}} 
+
+         {{#with syntax}} 
 
               <div class="display-6">Variables:</div>
              {{#each variables}}
             <button type="button" class="btn btn-outline-info">{{this}}</button>
              {{/each}}
-                              
+                        
         <br>
 
         <div class="display-6">Functions:</div>
@@ -34,6 +34,25 @@
                 <button type="button" class="btn btn-outline-info">{{this}}</button>
              {{/each}}
         <br>
+
+        <em>Variables - </em>         
+           
+                <button type="button" class="btn btn-outline-primary">var</button>
+                <button type="button" class="btn btn-outline-primary">let</button>
+                <button type="button" class="btn btn-outline-primary">const</button>
+            <br>
+            <br>
+            <em>Functions - </em>         
+           
+                <button type="button" class="btn btn-outline-primary">functions</button>
+            <br>
+            <br>
+        <em>Conditionals - </em>         
+           
+                <button type="button" class="btn btn-outline-primary">if</button>
+                <button type="button" class="btn btn-outline-primary">else</button>
+                <button type="button" class="btn btn-outline-primary">switch</button>
+
 
          <div class="display-6">Conditionals:</div>
             {{#each conditionals}}
